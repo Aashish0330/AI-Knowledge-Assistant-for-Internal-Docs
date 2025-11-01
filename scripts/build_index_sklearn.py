@@ -7,13 +7,36 @@ from sklearn.neighbors import NearestNeighbors
 
 os.makedirs("storage", exist_ok=True)
 
+# --- add near top (after imports) ---
+ORG_PAT = re.compile(r"^\s*#\s*([A-Za-z0-9][A-Za-z0-9 &_-]{1,80})\b.*", re.M)
+ORG_ALT = re.compile(r"^\s*([A-Za-z][A-Za-z &_-]{1,80})\s*[-–—]\s*", re.M)
+
+def infer_org(text: str, fallback_path: str) -> str:
+    m = ORG_PAT.search(text)
+    if m:
+        return m.group(1).strip()
+    m = ORG_ALT.search(text)
+    if m:
+        return m.group(1).strip()
+    # fallback: use filename stem (e.g., blueorbit_it_security -> Blueorbit)
+    stem = Path(fallback_path).stem.replace("_", " ").strip()
+    return stem[:1].upper() + stem[1:]
+
 # collect docs
-docs=[]
+docs = []
 for p in Path("data").rglob("*"):
     if p.is_file():
-        try: txt=p.read_text(encoding="utf-8", errors="ignore")
-        except Exception: txt=""
-        if txt.strip(): docs.append({"source": str(p), "text": txt})
+        try:
+            txt = p.read_text(encoding="utf-8", errors="ignore")
+        except Exception:
+            txt = ""
+        if txt.strip():
+            org = infer_org(txt, str(p))
+            docs.append({
+                "source": str(p),
+                "org": org,
+                "text": txt.strip()
+            })
 
 if not docs:
     print("No docs in ./data — add a .txt/.md and rerun.")

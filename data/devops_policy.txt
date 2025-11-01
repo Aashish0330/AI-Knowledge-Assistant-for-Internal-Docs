@@ -1,1 +1,0 @@
-Developers must rotate access keys every 60 days.

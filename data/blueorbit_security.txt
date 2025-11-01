@@ -1,0 +1,36 @@
+# BlueOrbit Technologies - IT and Security Policies
+
+## 1. Password Policy
+All employees must create passwords that are at least ten (10) characters long and include both letters and numbers.
+Passwords must be rotated every 60 days and may not reuse the previous five passwords.
+Temporary passwords provided for new hires expire within 24 hours.
+
+## 2. VPN Access Policy
+Employees working remotely must connect through the company VPN.
+The VPN requires multi-factor authentication (MFA) and automatically disconnects after 20 minutes of inactivity.
+All VPN activity is logged and monitored by the IT Security team.
+
+## 3. Access Key Management Policy
+Developers and administrators must request access keys through the internal credential system.
+Access keys are valid for 45 days and must be rotated automatically using approved scripts.
+Keys must never be shared, embedded in source code, or stored in configuration files.
+
+## 4. Incident Response Policy
+Any suspected phishing email, malware alert, or unauthorized access must be reported immediately to the Security Operations Center (SOC) at soc@blueorbit.com.
+The SOC will triage alerts and initiate an incident response within one (1) hour.
+Critical incidents trigger an executive review within 24 hours.
+
+## 5. Data Retention Policy
+Operational logs and email archives must be retained for at least 12 months.
+Customer transaction data is stored securely in the company’s data warehouse and backed up daily.
+All backups are encrypted using AES-256 encryption standards.
+
+## 6. Physical Security Policy
+Access to the data center is restricted to authorized personnel only.
+Visitors must be escorted at all times, and security cameras record all entry points 24/7.
+Security badges must be visible at all times within restricted zones.
+
+## 7. Acceptable Use Policy
+Company devices and networks are to be used for legitimate business purposes only.
+Users are prohibited from installing unapproved software, visiting malicious websites, or connecting unauthorized USB devices.
+Violations of this policy may result in disciplinary action.
