@@ -1,0 +1,1 @@
+Passwords rotate every 90 days. MFA required for VPN.
