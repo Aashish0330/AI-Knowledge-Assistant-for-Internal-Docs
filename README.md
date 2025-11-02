@@ -19,24 +19,24 @@ Built using **Python, scikit-learn, FAISS/NearestNeighbors, and Streamlit**, it 
 
 ---
 
-## 🏗️ Project Structure
-
 AI-Knowledge-Assistant-for-Internal-Docs/
-├── app_streamlit.py                # Streamlit front-end app
-├── scripts/
-│   ├── build_index_sklearn_chunks.py  # Builds chunked TF-IDF index
-│   ├── build_offline_index_tfidf.py   # Builds full-doc TF-IDF index
-│   ├── evaluate_ragas.py              # (optional) evaluation tools
+├── app_streamlit.py                 # Streamlit front-end app
+│
+├── scripts/                         # Indexing and evaluation scripts
+│   ├── build_index_sklearn_chunks.py   # Builds chunked TF-IDF index
+│   ├── build_offline_index_tfidf.py    # Builds full-document TF-IDF index
+│   └── evaluate_ragas.py               # (optional) evaluation tools
+│
 ├── rag/                              # RAG utility modules (splitting, prompts, etc.)
 │   ├── splitter.py
 │   ├── chain.py
 │   ├── loaders.py
 │   └── re_rank.py
+│
 ├── data/                             # Source documents (.txt, .md, .pdf)
 ├── storage/                          # Saved TF-IDF/SVD/NN indexes
 ├── requirements.txt
 └── README.md
-
 ---
 
 ## ⚙️ Installation
