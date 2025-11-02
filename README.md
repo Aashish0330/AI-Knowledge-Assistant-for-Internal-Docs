@@ -6,38 +6,6 @@ Built using **Python, scikit-learn, FAISS/NearestNeighbors, and Streamlit**, it 
 
 ---
 
-## 🧩 Tech Stack
-
-| Layer | Library / Tool | Purpose |
-|-------|-----------------|----------|
-| Frontend | [Streamlit](https://streamlit.io) | Interactive chat UI |
-| Retrieval | [scikit-learn](https://scikit-learn.org) | TF-IDF + NearestNeighbors search |
-| Indexing | NumPy, pandas | Data structures & persistence |
-| Dimensionality Reduction | TruncatedSVD | Optional compression of TF-IDF vectors |
-| Storage | Pickle | Saves vector index (`storage/*.pkl`) |
-| Parsing | [PyMuPDF](https://pymupdf.readthedocs.io/en/latest/) (for PDFs) | Text extraction |
-
----
-
-AI-Knowledge-Assistant-for-Internal-Docs/
-├── app_streamlit.py                 # Streamlit front-end app
-│
-├── scripts/                         # Indexing and evaluation scripts
-│   ├── build_index_sklearn_chunks.py   # Builds chunked TF-IDF index
-│   ├── build_offline_index_tfidf.py    # Builds full-document TF-IDF index
-│   └── evaluate_ragas.py               # (optional) evaluation tools
-│
-├── rag/                              # RAG utility modules (splitting, prompts, etc.)
-│   ├── splitter.py
-│   ├── chain.py
-│   ├── loaders.py
-│   └── re_rank.py
-│
-├── data/                             # Source documents (.txt, .md, .pdf)
-├── storage/                          # Saved TF-IDF/SVD/NN indexes
-├── requirements.txt
-└── README.md
----
 
 ## ⚙️ Installation
 
