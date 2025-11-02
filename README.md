@@ -152,7 +152,6 @@ Mac M3 / ARM issues	Ensure numpy<2.0 and rebuild index
 📄 License
 
 MIT License © 2025
-Created by [Your Name] — Local AI Assistant for enterprise document intelligence.
 
 ⸻
 
@@ -166,5 +165,3 @@ This project uses open-source components from:
 	•	LangChain community examples￼
 
 ---
-
-Would you like me to make a **shorter README version** (1-page, recruiter-friendly overview) for GitHub’s landing view — highlighting the RAG architecture and screenshots — or keep it as this detailed developer version?
