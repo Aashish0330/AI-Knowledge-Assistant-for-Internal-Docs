@@ -1,0 +1,26 @@
+# Ignore environment files
+.env
+.env.*
+
+# Ignore build and cache artifacts
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+*.log
+
+# Ignore local storage, indexes, and Streamlit cache
+storage/
+.streamlit/
+*.db
+
+# Ignore Jupyter/VSCode/IDE stuff
+.ipynb_checkpoints/
+.vscode/
+.DS_Store
+
+# Ignore virtual environments
+venv/
+.env/
+.venv/
